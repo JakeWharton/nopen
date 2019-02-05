@@ -6,7 +6,7 @@
 # http://benlimmer.com/2013/12/26/automatically-publish-javadoc-to-gh-pages-with-travis-ci/
 
 SLUG="JakeWharton/nopen"
-JDK="oraclejdk8"
+JDK="openjdk11"
 BRANCH="master"
 
 set -e
