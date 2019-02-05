@@ -1,7 +1,8 @@
 Nope'n!
 =======
 
-An error-prone checker which requires that classes be `final`, `abstract` or annotated with `@Open`.
+An error-prone checker which requires that classes be `final`, `abstract`, or annotated with
+`@Open`.
 
 >  Design and document for inheritance or else prohibit it
 >
