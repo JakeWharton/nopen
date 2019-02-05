@@ -27,7 +27,7 @@ import static javax.lang.model.element.Modifier.PRIVATE;
 @BugPattern(
     name = "Nopen",
     summary = "Classes should be explicitly marked final, abstract, or @Open",
-    explanation = "Java creates new types as open by default which is a dangerous default. "
+    explanation = "Java creates new types as open by default which can be dangerous. "
         + "This checker ensures that the intent to leave a class open is explicitly declared. "
         + "For more information see Item 19 of Effective Java, Third Edition.",
     linkType = CUSTOM,

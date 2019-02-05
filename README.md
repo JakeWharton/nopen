@@ -11,8 +11,8 @@ An error-prone checker which requires that classes be `final`, `abstract` or ann
 Usage
 -----
 
-Java creates new types as open by default which is a dangerous default. This checker ensures that
-the intent to leave a class open is explicitly declared.
+Java creates new types as open by default which can be dangerous. This checker ensures that the
+intent to leave a class open is explicitly declared.
 
 ```java
 import com.jakewharton.nopen.annotation.Open;
