@@ -1,0 +1,17 @@
+apply plugin: 'java-library'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+  implementation project(':nopen-annotations')
+  compileOnly deps.errorProne.checkApi
+  compileOnly deps.autoService // TODO update to auto-service-annotations once released
+  annotationProcessor deps.autoService
+
+  testImplementation deps.junit
+  testImplementation deps.compileTesting
+  testImplementation deps.errorProne.testHelpers
+}
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

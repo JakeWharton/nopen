@@ -1,0 +1,19 @@
+language: java
+
+jdk:
+  - openjdk11
+
+after_success:
+  - .buildscript/deploy_snapshot.sh
+
+env:
+  global:
+    #- secure: "TODO"
+    #- secure: "TODO"
+
+branches:
+  except:
+    - gh-pages
+
+notifications:
+  email: false

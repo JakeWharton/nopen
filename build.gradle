@@ -1,0 +1,38 @@
+buildscript {
+  ext.versions = [
+      'errorProne': '2.3.2',
+  ]
+
+  ext.deps = [
+      'errorProne': [
+          'core': "com.google.errorprone:error_prone_core:${versions.errorProne}",
+          'checkApi': "com.google.errorprone:error_prone_check_api:${versions.errorProne}",
+          'testHelpers': "com.google.errorprone:error_prone_test_helpers:${versions.errorProne}",
+      ],
+      'autoService': "com.google.auto.service:auto-service:1.0-rc4",
+      'junit': 'junit:junit:4.13-beta-1',
+      'truth': 'com.google.truth:truth:0.42',
+      'compileTesting': 'com.google.testing.compile:compile-testing:0.15',
+  ]
+
+  repositories {
+    mavenCentral()
+    gradlePluginPortal()
+  }
+
+  dependencies {
+    classpath 'net.ltgt.gradle:gradle-errorprone-plugin:0.7'
+  }
+}
+
+subprojects {
+  apply plugin: 'net.ltgt.errorprone'
+
+  repositories {
+    mavenCentral()
+  }
+
+  dependencies {
+    errorprone "com.google.errorprone:error_prone_core:${versions.errorProne}"
+  }
+}
