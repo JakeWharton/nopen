@@ -20,7 +20,7 @@ import com.jakewharton.nopen.annotation.Open;
 
 final class Foo {}
 abstract class Bar {}
-@Open class Baz {}
+@Open class Bad {}
 ```
 
 Non-`final`, Non-`abstract` classes without the `@Open` annotation will be marked with an error.
