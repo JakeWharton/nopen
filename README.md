@@ -44,8 +44,8 @@ Gradle, using [`net.ltgt.errorprone` plugin](https://github.com/tbroyer/gradle-e
 
 ```groovy
 dependencies {
-  compileOnly 'com.jakewharton.nopen:nopen-annotations:1.0.0'
-  errorprone 'com.jakewharton.nopen:nopen-checker:1.0.0'
+  compileOnly 'com.jakewharton.nopen:nopen-annotations:1.0.1'
+  errorprone 'com.jakewharton.nopen:nopen-checker:1.0.1'
 }
 ```
 
