@@ -1,0 +1,13 @@
+import net.ltgt.gradle.errorprone.CheckSeverity
+
+apply plugin: 'java'
+apply plugin: 'net.ltgt.errorprone'
+
+dependencies {
+  compileOnly project(':nopen-annotations')
+  errorprone project(':nopen-checker')
+}
+
+tasks.named("compileTestJava").configure {
+  options.errorprone.check("Nopen", CheckSeverity.OFF)
+}

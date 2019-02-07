@@ -1,2 +1,5 @@
 include ':nopen-annotations'
 include ':nopen-checker'
+
+include ':sample-android'
+include ':sample-java'

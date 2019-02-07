@@ -49,6 +49,34 @@ dependencies {
 }
 ```
 
+By default the check will operate everywhere that error-prone runs. You can disable it for tests,
+for example, where the extra safety isn't necessary.
+
+For Java projects:
+```groovy
+import net.ltgt.gradle.errorprone.CheckSeverity
+
+tasks.named("compileTestJava").configure {
+  options.errorprone.check("Nopen", CheckSeverity.OFF)
+}
+```
+
+For Android projects:
+```groovy
+import net.ltgt.gradle.errorprone.CheckSeverity
+
+android.testVariants.all { variant ->
+  variant.javaCompileProvider.configure {
+    options.errorprone.check("Nopen", CheckSeverity.OFF)
+  }
+}
+android.unitTestVariants.all { variant ->
+  variant.javaCompileProvider.configure {
+    options.errorprone.check("Nopen", CheckSeverity.OFF)
+  }
+}
+```
+
 
 
 License
