@@ -1,0 +1,33 @@
+import net.ltgt.gradle.errorprone.CheckSeverity
+
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion 28
+
+  defaultConfig {
+    applicationId 'com.example'
+
+    minSdkVersion 21
+    targetSdkVersion 28
+
+    versionCode 1
+    versionName '1'
+  }
+}
+
+dependencies {
+  compileOnly project(':nopen-annotations')
+  errorprone project(':nopen-checker')
+}
+
+android.testVariants.all { variant ->
+  variant.javaCompileProvider.configure {
+    options.errorprone.check("Nopen", CheckSeverity.OFF)
+  }
+}
+android.unitTestVariants.all { variant ->
+  variant.javaCompileProvider.configure {
+    options.errorprone.check("Nopen", CheckSeverity.OFF)
+  }
+}

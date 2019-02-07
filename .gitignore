@@ -5,4 +5,5 @@ out/
 
 # Gradle
 build
-.gradle
+/.gradle
+/reports
