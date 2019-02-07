@@ -31,7 +31,7 @@ import static javax.lang.model.element.Modifier.PRIVATE;
         + "This checker ensures that the intent to leave a class open is explicitly declared. "
         + "For more information see Item 19 of Effective Java, Third Edition.",
     linkType = CUSTOM,
-    link = "https://gitub.com/JakeWharton/nopen#usage",
+    link = "https://github.com/JakeWharton/nopen#usage",
     severity = ERROR
 )
 public final class NopenChecker extends BugChecker implements ClassTreeMatcher {
