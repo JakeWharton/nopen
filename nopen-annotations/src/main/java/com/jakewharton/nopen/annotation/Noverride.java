@@ -7,7 +7,8 @@ import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.RetentionPolicy.SOURCE;
 
 /**
- * @Noverride might be mistaken with the original @Override, but for now this is only a POC
+ * @Noverride might be mistaken with the original @Override, but for now this is only a POC.
+ * we could reuse @Open as well.
  */
 @Target(METHOD)
 @Retention(SOURCE)
