@@ -14,4 +14,9 @@ dependencies {
   testImplementation deps.errorProne.testHelpers
 }
 
+// is there a way to set this up automatically?
+//test {
+//  jvmArgs "-Xbootclasspath/p:path"
+//}
+
 apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

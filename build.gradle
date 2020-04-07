@@ -1,6 +1,6 @@
 buildscript {
   ext.versions = [
-      'errorProne': '2.3.2',
+      'errorProne': '2.3.4',
   ]
 
   ext.deps = [
@@ -9,10 +9,10 @@ buildscript {
           'checkApi': "com.google.errorprone:error_prone_check_api:${versions.errorProne}",
           'testHelpers': "com.google.errorprone:error_prone_test_helpers:${versions.errorProne}",
       ],
-      'autoService': "com.google.auto.service:auto-service:1.0-rc4",
-      'junit': 'junit:junit:4.13-beta-1',
-      'truth': 'com.google.truth:truth:0.42',
-      'compileTesting': 'com.google.testing.compile:compile-testing:0.15',
+      'autoService': "com.google.auto.service:auto-service:1.0-rc6",
+      'junit': 'junit:junit:4.13',
+      'truth': 'com.google.truth:truth:0.46',
+      'compileTesting': 'com.google.testing.compile:compile-testing:0.18',
   ]
 
   repositories {
@@ -22,8 +22,8 @@ buildscript {
   }
 
   dependencies {
-    classpath 'net.ltgt.gradle:gradle-errorprone-plugin:0.7'
-    classpath 'com.android.tools.build:gradle:3.3.1'
+    classpath 'net.ltgt.gradle:gradle-errorprone-plugin:1.1.1'
+    classpath 'com.android.tools.build:gradle:3.6.2'
   }
 }
 
@@ -43,5 +43,6 @@ subprojects {
 
   dependencies {
     errorprone "com.google.errorprone:error_prone_core:${versions.errorProne}"
+    errorproneJavac "com.google.errorprone:javac:9+181-r4173-1"
   }
 }
