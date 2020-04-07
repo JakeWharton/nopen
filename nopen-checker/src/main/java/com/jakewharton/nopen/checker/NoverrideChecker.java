@@ -31,7 +31,7 @@ import static javax.lang.model.element.Modifier.STATIC;
         summary = "Methods should be explicitly marked final, static, private, abstract, native or @Noverride",
         explanation = "Java creates new types as open by default which can be dangerous. "
                 + "This checker ensures that the intent to leave a method overridable is explicitly declared. "
-                + "For more information see Item 19 of Effective Java, Third Edition.", // is there a specific type for that or is 19 suitable?
+                + "For more information see Item 19 of Effective Java, Third Edition.", // is there a specific item for that or is item 19 suitable?
         linkType = CUSTOM,
         link = "https://github.com/JakeWharton/nopen#usage",
         severity = ERROR
